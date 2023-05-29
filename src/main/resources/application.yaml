@@ -1,0 +1,17 @@
+spring:
+  datasource:
+    username: root
+    password: 123456
+    url: jdbc:mysql://localhost:3306/pld?useUnicode=true&characterEncoding=utf-8&serverTimezone=GMT%2B8
+    driver-class-name: com.mysql.cj.jdbc.Driver
+
+# 配置日志
+mybatis-plus:
+  configuration:
+    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
+  #逻辑删除
+  global-config:
+    db-config:
+      logic-delete-value: 1
+      logic-not-delete-value: 0
+
